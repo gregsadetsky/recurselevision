@@ -13,5 +13,12 @@ pip install -r requirements.txt
 ### run
 
 ```bash
-uvicorn main:app --reload
+uvicorn rctv.main:app --reload
 ```
+
+## deployment
+
+https://rctv.recurse.com
+
+- hosted on greg's render account
+- site is automatically deploye upon git pushing to this repo
