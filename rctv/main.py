@@ -22,7 +22,7 @@ assert len(BASIC_HTTP_AUTH_USER) and len(BASIC_HTTP_AUTH_PASSWORD)
 DEBUG = os.environ.get("DEBUG") == "True"
 
 if not DEBUG:
-    # do a test access using the token, and fail immediately if it doesn't work
+    # do a test access using the rc api token, and fail immediately if it doesn't work
     assert get_profile(RC_ACCESS_TOKEN)["id"]
 
 app = FastAPI()
