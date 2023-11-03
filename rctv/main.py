@@ -28,6 +28,9 @@ async def rctv(
     request: Request,
     app_index: int,
 ):
+    # FIXME roll out basic auth
+    return
+
     if app_index >= len(all_apps):
         return "App index not found"
 
