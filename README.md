@@ -21,4 +21,4 @@ uvicorn rctv.main:app --reload
 https://rctv.recurse.com
 
 - hosted on greg's render account
-- site is automatically deploye upon git pushing to this repo
+- site is automatically deployed upon git pushing to this repo
