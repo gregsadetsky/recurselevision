@@ -1,4 +1,17 @@
-# recurselevision aka RCTV
+# RCTV
+
+## what is this
+
+an IRL tv dashboard at the [Recurse Center](https://recurse.com/) with "tv apps" to bridge the physical-virtual schism
+
+### hardware BOM
+
+- a raspi
+- a television
+
+### TODO
+
+- see [here](./TODO.md)!
 
 ## how to dev
 

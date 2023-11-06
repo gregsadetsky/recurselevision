@@ -4,9 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RCTV</title>
-  {% if not is_single_app %}
-    <meta http-equiv="refresh" content="{{ meta_refresh_seconds }}; url=/app/{{ next_app_index }}">
-  {% endif %}
+  <meta http-equiv="refresh" content="{{ meta_refresh_seconds }}; url=/app/{{ next_app_index }}">
   <style>
     html, body, iframe {
       padding: 0;
