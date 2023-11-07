@@ -19,8 +19,6 @@ const getSignedInUsers = (token: string) => {
   // TODO:
 };
 
-const
-
 // Calls the developer provided function when ready
 const onLoad = (theirs: (api: API) => void) => {
   // Tell parent (rctv) that onLoad was called so it can stop its 30 second timer
