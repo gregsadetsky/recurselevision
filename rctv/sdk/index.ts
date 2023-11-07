@@ -70,16 +70,17 @@ const getSignedInUsers = (token: string) => {
   // TODO:
 };
 
-// Immediately tell the parent that this script was loaded. This allows the
-// parent to start a timer until the developer calls RC.onLoad()
-window.parent.postMessage({
-  type: SDK_LOADED_START,
-}, "*");
+document.addEventListener("DOMContentLoaded", () => {
+  // Immediately tell the parent that this script was loaded. This allows the
+  // parent to start a timer until the developer calls RC.onLoad()
+  window.parent.postMessage({
+    type: SDK_LOADED_START,
+  }, "*");
+});
 
 // Global expor
 var RC = {
   onLoad,
 };
 
-// SNEAKYUYYYYYYYYY
-export default RC;
+window.RC = RC;

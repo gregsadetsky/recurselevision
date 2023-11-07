@@ -33,13 +33,12 @@ var onLoad = (theirs) => {
 };
 var getSignedInUsers = (token) => {
 };
-window.parent.postMessage({
-  type: SDK_LOADED_START
-}, "*");
+document.addEventListener("DOMContentLoaded", () => {
+  window.parent.postMessage({
+    type: SDK_LOADED_START
+  }, "*");
+});
 var RC = {
   onLoad
 };
-var sdk_default = RC;
-export {
-  sdk_default as default
-};
+window.RC = RC;

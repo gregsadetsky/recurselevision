@@ -28,29 +28,26 @@
     window.onmessage = (event) => {
       const data = event.data;
       const iframe = event.source.window;
-      data, event, iframe,
-        type: data.type
-    })
-    switch (data.type) {
-      case GET_RC_PAYLOAD: {
-        iframe.postMessage({
-          type: 'RCPayload',
-          payload: window.rcPayload
-        }, '*');
-        break;
+      switch (data.type) {
+        case GET_RC_PAYLOAD: {
+          iframe.postMessage({
+            type: 'RCPayload',
+            payload: window.rcPayload
+          }, '*');
+          break;
+        }
+        case SDK_LOADED_START: {
+          timeoutID = setTimeout(() => {
+            alert("HAHA SLOW COMPUTER MONKEY")
+            // TODO: Go to the next iframe
+          }, TIME_LIMIT)
+          break;
+        }
+        case SDK_LOADED_END: {
+          if (timeoutID) {clearTimeout(timeoutID)}
+          break;
+        }
       }
-      case SDK_LOADED_START: {
-        timeoutID = setTimeout(() => {
-          alert("HAHA SLOW COMPUTER MONKEY")
-          // TODO: Go to the next iframe
-        }, TIME_LIMIT)
-        break;
-      }
-      case SDK_LOADED_END: {
-        if (timeoutID) {clearTimeout(timeoutID)}
-        break;
-      }
-    }
     }
   </script>
   </head>
