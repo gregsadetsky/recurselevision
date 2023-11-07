@@ -6,8 +6,10 @@ from typing import Annotated
 
 from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, HTTPException, Request, Response, status
+from fastapi.staticfiles import StaticFiles
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.templating import Jinja2Templates
+from fastapi.middleware.cors import CORSMiddleware
 
 from .recurse_api import get_hub_visits_for_today, get_profile
 
@@ -29,6 +31,21 @@ app = FastAPI()
 templates = Jinja2Templates(directory="rctv/templates")
 all_apps = json.loads(Path("rctv/apps.json").read_text())
 security = HTTPBasic()
+
+# This is 'bad' only doing this so we can load app-sdk.js from localhost
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# Server static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/")
