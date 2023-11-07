@@ -17,3 +17,4 @@
 
 - @jryio and @gregsadetsky
 - thanks to @nicholasbs for inspiration, support and contributions as well!!
+- thanks @will-morningstar for status of pairing stations in Virtual RC idea!
