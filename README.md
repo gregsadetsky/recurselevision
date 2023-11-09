@@ -1,4 +1,10 @@
-# RCTV
+# THIS IS NOT THE REPO YOU ARE LOOKING FOR.
+
+[Go here ---------->>>>>>>>>>>>>>>>>>>>>>>>>](https://github.com/gregsadetsky/rctv)
+
+thank you.
+
+---
 
 ## what is this
 
